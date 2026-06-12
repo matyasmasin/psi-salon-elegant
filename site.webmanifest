@@ -1,0 +1,11 @@
+{
+  "name": "Psí salon Elegant Style",
+  "short_name": "Elegant Style",
+  "icons": [
+    { "src": "apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ],
+  "theme_color": "#d94f76",
+  "background_color": "#fffaf7",
+  "display": "browser",
+  "start_url": "."
+}

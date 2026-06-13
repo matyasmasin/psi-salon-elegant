@@ -2,7 +2,7 @@
 
 Moderní dvojjazyčný web (CZ/EN) psího salonu Elegant Style, Praha 13 – Lužiny.
 
-**Live:** https://matyasmasin.github.io/psi-salon-elegant/ · EN: https://matyasmasin.github.io/psi-salon-elegant/en/
+**Live:** https://psisalonluziny.cz/ · EN: https://psisalonluziny.cz/en/
 
 - Čisté HTML/CSS/JS, žádný framework ani build krok
 - Mobile-first, přístupné (WCAG AA), Lighthouse-friendly

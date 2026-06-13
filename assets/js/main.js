@@ -43,4 +43,38 @@
   } else {
     revealed.forEach(function (el) { el.classList.add("visible"); });
   }
+
+  // Contact form (Web3Forms)
+  var form = document.getElementById("contact-form");
+  if (form) {
+    var status = form.querySelector(".form-status");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var btn = form.querySelector('button[type="submit"]');
+      status.className = "form-status is-sending";
+      status.textContent = "Odesílám…";
+      if (btn) btn.disabled = true;
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: new FormData(form)
+      })
+        .then(function (r) { return r.json(); })
+        .then(function (res) {
+          if (res.success) {
+            status.className = "form-status is-ok";
+            status.textContent = "Děkujeme! Zprávu jsme dostali a brzy se vám ozveme.";
+            form.reset();
+          } else {
+            status.className = "form-status is-err";
+            status.textContent = "Odeslání se nezdařilo. Zavolejte nám prosím na 603 89 00 00.";
+          }
+        })
+        .catch(function () {
+          status.className = "form-status is-err";
+          status.textContent = "Odeslání se nezdařilo. Zavolejte nám prosím na 603 89 00 00.";
+        })
+        .finally(function () { if (btn) btn.disabled = false; });
+    });
+  }
 })();

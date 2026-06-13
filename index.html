@@ -465,6 +465,37 @@
             <figcaption>Vchod do salonu – Píškova 1956/32, hledejte ceduli „PSÍ SALON“ v okně suterénu.</figcaption>
           </figure>
         </div>
+
+        <div class="form-card reveal" id="napiste-nam">
+          <h3>Nemůžete zavolat? Napište nám</h3>
+          <p class="form-intro">Vyplňte formulář a my se vám co nejdřív ozveme. Pole označená <span aria-hidden="true">*</span> jsou povinná.</p>
+          <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+            <input type="hidden" name="access_key" value="REPLACE_WITH_WEB3FORMS_KEY">
+            <input type="hidden" name="subject" value="Nová poptávka z webu psisalonluziny.cz">
+            <input type="hidden" name="from_name" value="Web Psí salon Elegant Style">
+            <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <div class="form-row">
+              <label for="cf-name">Jméno a příjmení <span aria-hidden="true">*</span></label>
+              <input id="cf-name" type="text" name="name" required autocomplete="name">
+            </div>
+            <div class="form-grid">
+              <div class="form-row">
+                <label for="cf-phone">Telefon <span aria-hidden="true">*</span></label>
+                <input id="cf-phone" type="tel" name="phone" required inputmode="tel" autocomplete="tel">
+              </div>
+              <div class="form-row">
+                <label for="cf-email">E-mail</label>
+                <input id="cf-email" type="email" name="email" autocomplete="email">
+              </div>
+            </div>
+            <div class="form-row">
+              <label for="cf-msg">Zpráva</label>
+              <textarea id="cf-msg" name="message" rows="4" placeholder="Plemeno, požadovaná služba a přibližný termín (nepovinné)…"></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Odeslat poptávku</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
       </div>
     </section>
   </main>

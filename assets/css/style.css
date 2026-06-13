@@ -732,6 +732,14 @@ h3 { font-size: 1.2rem; }
 .cta-band p { color: #ffe3eb; margin-top: 0.4rem; }
 .cta-band .btn-primary { background: #fff; color: var(--rose-deep); box-shadow: none; }
 .cta-band .btn-primary:hover { background: var(--blush); }
+
+/* SMS/e-mail nudge + service link hub (added in SEO/CRO pass) */
+.hero-note { margin-top: 0.9rem; font-size: 0.98rem; color: var(--ink-soft); }
+.hero-note a { font-weight: 800; }
+.service-links { text-align: center; color: var(--ink-soft); margin-top: 1.6rem; }
+.service-links a { font-weight: 700; white-space: nowrap; }
+.contact-alt { display: block; margin-top: 0.4rem; font-size: 0.92rem; color: var(--ink-soft); }
+.contact-alt a { font-weight: 800; }
 @media (min-width: 760px) {
   .cta-band { grid-template-columns: 1fr auto; }
 }

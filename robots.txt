@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://matyasmasin.github.io/psi-salon-elegant/sitemap.xml
+Sitemap: https://psisalonluziny.cz/sitemap.xml

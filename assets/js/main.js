@@ -50,6 +50,12 @@
     var status = form.querySelector(".form-status");
     form.addEventListener("submit", function (e) {
       e.preventDefault();
+      var key = form.querySelector('[name="access_key"]');
+      if (!key || key.value === "REPLACE_WITH_WEB3FORMS_KEY") {
+        status.className = "form-status is-err";
+        status.textContent = "Formulář se právě dokončuje – zatím nám prosím zavolejte nebo napište SMS na 603 89 00 00.";
+        return;
+      }
       var btn = form.querySelector('button[type="submit"]');
       status.className = "form-status is-sending";
       status.textContent = "Odesílám…";

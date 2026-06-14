@@ -479,21 +479,6 @@ h3 { font-size: 1.2rem; }
   border-radius: 16px;
   box-shadow: var(--shadow-sm);
 }
-.badge-cert {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  background: var(--white);
-  border: 1px solid var(--gold);
-  color: #8a5a00;
-  border-radius: var(--radius-sm);
-  padding: 0.7rem 1.1rem;
-  font-weight: 800;
-  font-size: 0.93rem;
-  margin-top: 1.2rem;
-}
-.badge-cert svg { color: var(--gold); flex: none; }
-
 /* ---------- about ---------- */
 .about-photos { position: relative; max-width: 480px; margin-inline: auto; }
 .about-photos img:first-child {

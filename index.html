@@ -37,14 +37,17 @@
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
+    "additionalType": "https://www.productontology.org/id/Dog_grooming",
     "@id": "https://psisalonluziny.cz/#salon",
     "name": "Psí salon Elegant Style",
-    "alternateName": "Psí salon P13 Lužiny",
-    "description": "Psí salon pro jorkšíry, malá a střední plemena v Praze 13 na Lužinách. Stříhání, koupání, trimování a kompletní úprava psů od roku 2004. Pořádáme kurzy stříhání psů.",
+    "alternateName": ["Psí salon P13 Lužiny", "Psí salon Elegant", "Elegant Style psí salon"],
+    "slogan": "Váš pejsek si zaslouží elegantní styl",
+    "description": "Psí salon a psí kadeřnictví pro jorkšíry, malá a střední plemena v Praze 13 na Lužinách (katastr Stodůlky). Stříhání, koupání, trimování a kompletní úprava psů od roku 2004. Pořádáme kurzy stříhání psů.",
     "url": "https://psisalonluziny.cz/",
     "telephone": "+420603890000",
-    "image": "https://psisalonluziny.cz/assets/img/og-image.jpg",
+    "image": ["https://psisalonluziny.cz/assets/img/og-image.jpg", "https://psisalonluziny.cz/assets/img/entrance.webp", "https://psisalonluziny.cz/assets/img/hero.webp"],
     "logo": "https://psisalonluziny.cz/apple-touch-icon.png",
+    "knowsAbout": ["stříhání psů", "úprava jorkšíra", "stříhání pudla", "trimování psů", "koupání psů", "péče o psí srst"],
     "priceRange": "60 Kč – 900 Kč",
     "currenciesAccepted": "CZK",
     "foundingDate": "2004",
@@ -58,6 +61,10 @@
       "addressCountry": "CZ"
     },
     "geo": { "@type": "GeoCoordinates", "latitude": 50.0445, "longitude": 14.3310 },
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=P%C3%AD%C5%A1kova%201956%2F32%2C%20Praha%2013",
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "18:00", "description": "Na objednávku; víkendy po dohodě" }
+    ],
     "sameAs": ["https://www.facebook.com/PsiSalonElegantStyle"],
     "email": "egsm@volny.cz",
     "areaServed": ["Praha 13", "Lužiny", "Stodůlky", "Nové Butovice", "Velká Ohrada", "Hůrka", "Barrandov", "Jinonice", "Praha 5", "Praha"],
@@ -135,6 +142,19 @@
     "publisher": { "@id": "https://psisalonluziny.cz/#salon" }
   }
   </script>
+
+  <!--
+    ANALYTIKA / MĚŘENÍ KONVERZÍ – vložte JEDNU z variant a doplňte své ID.
+    Kliky na telefon/SMS/e-mail i odeslání formuláře už měří main.js
+    (události: contact_click, generate_lead) a samy se napojí na gtag/Plausible/dataLayer.
+
+    GA4 – nahraďte G-XXXXXXXXXX svým Measurement ID:
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+
+    Nebo Plausible (bez cookies, nevyžaduje cookie lištu):
+    <script defer data-domain="psisalonluziny.cz" src="https://plausible.io/js/script.tagged-events.js"></script>
+  -->
 </head>
 <body>
   <a class="skip-link" href="#main">Přeskočit na obsah</a>
@@ -184,8 +204,8 @@
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.3l-6.2 3.7 1.6-7L2 9.2l7.1-.6L12 2l2.9 6.6 7.1.6-5.4 4.8 1.6 7z"/></svg>
             Na Lužinách už od roku 2004
           </p>
-          <h1>Váš pejsek si zaslouží <em>elegantní styl</em></h1>
-          <p class="hero-lead"><strong>Psí salon na Praze&nbsp;13&nbsp;– Lužiny.</strong> Stříhání, koupání a kompletní úprava jorkšírů, malých a středních plemen. V klidu, bez sedativ&nbsp;– a&nbsp;můžete být u toho.</p>
+          <h1>Psí salon Praha&nbsp;13&nbsp;– Lužiny</h1>
+          <p class="hero-lead" style="margin-top:0.7rem"><strong>Stříhání, koupání a kompletní úprava jorkšírů, malých a středních plemen.</strong> Psí kadeřnictví 1&nbsp;minutu od metra Lužiny – kousek od Stodůlek, Nových Butovic i Hůrky. V klidu, bez sedativ a&nbsp;můžete být u toho. <em>Váš pejsek si zaslouží elegantní styl.</em></p>
           <div class="hero-ctas">
             <a class="btn btn-primary" href="tel:+420603890000">
               <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
@@ -259,8 +279,19 @@
             <p>Krácení drápků, čištění uší a vytrhání chloupků, vyprázdnění análních žlázek.</p>
           </div>
         </div>
-        <p class="service-links reveal">Podrobně k vybraným službám: <a href="strihani-jorksira/">stříhání jorkšíra</a> · <a href="strihani-pudla/">stříhání pudla</a> · <a href="koupani-psu/">koupání a fénování</a> · <a href="trimovani-psu/">trimování</a></p>
+        <p class="service-links reveal">Podrobně k vybraným službám: <a href="strihani-jorksira/">stříhání jorkšíra</a> · <a href="strihani-pudla/">stříhání pudla</a> · <a href="koupani-psu/">koupání a fénování</a> · <a href="trimovani-psu/">trimování</a> · <a href="kurzy-strihani-psu/">kurzy stříhání</a> · <a href="cenik/">ceník</a></p>
         <p class="note-pill reveal">🛍️ V salonu nabízíme i doplňkový prodej dle aktuální nabídky – kartáče, oblečky, pamlsky a psí kosmetiku.</p>
+        <div class="section-head reveal" style="margin-top:2.8rem">
+          <span class="kicker">Z naší práce</span>
+          <h2>Pár pejsků po úpravě</h2>
+          <p>Každý od nás odchází parádně upravený a spokojený. Další fotky přidáváme na <a href="https://www.facebook.com/PsiSalonElegantStyle" rel="noopener" target="_blank">našem Facebooku</a>.</p>
+        </div>
+        <div class="gallery-grid reveal">
+          <img src="assets/img/happy.webp" alt="Čerstvě ostříhaný spokojený pejsek malého plemene" width="900" height="1125" loading="lazy">
+          <img src="assets/img/hero.webp" alt="Upravené štěně kavalír king Charles španěla na polštáři" width="1200" height="960" loading="lazy">
+          <img src="assets/img/towel.webp" alt="Pejsek zabalený v ručníku po koupeli a fénování" width="900" height="675" loading="lazy">
+          <img src="assets/img/puppy.webp" alt="Chlupaté štěně připravené na první úpravu srsti" width="900" height="600" loading="lazy">
+        </div>
       </div>
     </section>
 
@@ -353,7 +384,7 @@
             <h2>Naučte se stříhat psy od profesionálky</h2>
             <p>Kurzy stříhání a úpravy psů pořádáme už od roku 2004. Termíny jsou vždy dohodou – všední dny i víkendy. V době kurzů navíc stříháme a koupeme modelové pejsky zdarma; můžete se přihlásit do naší databáze.</p>
           </div>
-          <p style="margin-top:1.2rem"><a class="btn btn-ghost" href="https://www.rekvalifikace-kurzy.com" rel="noopener" target="_blank">Více o kurzech na rekvalifikace-kurzy.com</a></p>
+          <p style="margin-top:1.2rem"><a class="btn btn-primary" href="kurzy-strihani-psu/">Více o kurzech stříhání psů →</a></p>
         </div>
       </div>
     </section>
@@ -515,7 +546,7 @@
         <span>Elegant Style<small>Psí salon · Lužiny</small></span>
       </a>
       <p class="footer-meta">Hana Mašínová – Elegant Style · IČ 63924013<br>Píškova 1956/32, 155 00 Praha 13 – Lužiny</p>
-      <p class="footer-meta">© 2004–2026 Psí salon Elegant Style<br><a href="strihani-jorksira/">Stříhání jorkšíra</a> · <a href="strihani-pudla/">Stříhání pudla</a> · <a href="koupani-psu/">Koupání psů</a> · <a href="trimovani-psu/">Trimování</a> · <a href="poradna/">Poradna</a> · <a href="en/">English</a></p>
+      <p class="footer-meta">© 2004–2026 Psí salon Elegant Style<br><a href="strihani-jorksira/">Stříhání jorkšíra</a> · <a href="strihani-pudla/">Stříhání pudla</a> · <a href="koupani-psu/">Koupání psů</a> · <a href="trimovani-psu/">Trimování</a> · <a href="kurzy-strihani-psu/">Kurzy stříhání</a> · <a href="cenik/">Ceník</a> · <a href="psi-salon-stodulky/">Stodůlky</a> · <a href="psi-salon-nove-butovice/">Nové Butovice</a> · <a href="poradna/">Poradna</a> · <a href="en/">English</a></p>
     </div>
   </footer>
 

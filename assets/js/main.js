@@ -1,6 +1,22 @@
 (function () {
   "use strict";
 
+  // Conversion tracking helper – fires to GA4 (gtag), Plausible or dataLayer
+  // if any is present. Safe no-op until you add an analytics snippet in <head>.
+  function trackEvent(name, params) {
+    try {
+      if (typeof window.gtag === "function") {
+        window.gtag("event", name, params || {});
+      }
+      if (typeof window.plausible === "function") {
+        window.plausible(name, params ? { props: params } : undefined);
+      }
+      if (Array.isArray(window.dataLayer)) {
+        window.dataLayer.push(Object.assign({ event: name }, params || {}));
+      }
+    } catch (e) { /* tracking must never break the page */ }
+  }
+
   // Sticky header shadow
   var header = document.querySelector(".site-header");
   var onScroll = function () {
@@ -70,6 +86,7 @@
           if (res.success) {
             status.className = "form-status is-ok";
             status.textContent = "Děkujeme! Zprávu jsme dostali a brzy se vám ozveme.";
+            trackEvent("generate_lead", { method: "form" });
             form.reset();
           } else {
             status.className = "form-status is-err";
@@ -83,4 +100,16 @@
         .finally(function () { if (btn) btn.disabled = false; });
     });
   }
+
+  // Track click-to-call / SMS / e-mail as conversions (GA4 / Plausible / dataLayer)
+  document.addEventListener("click", function (e) {
+    var t = e.target;
+    var link = t && t.closest ? t.closest('a[href^="tel:"], a[href^="sms:"], a[href^="mailto:"]') : null;
+    if (!link) return;
+    var href = link.getAttribute("href") || "";
+    var method = href.lastIndexOf("tel:", 0) === 0 ? "phone"
+      : href.lastIndexOf("sms:", 0) === 0 ? "sms"
+      : "email";
+    trackEvent("contact_click", { method: method });
+  }, true);
 })();
